@@ -1,0 +1,89 @@
+<html>
+    <head>
+    <title>Verificação de CEP</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+    </head>
+
+    <body>
+    <!-- Inicio do formulario -->
+      <form method="get" action="#">
+            <fieldset class="quadroCEP">
+                    <legend>Endereço de Residência</legend>
+        
+                    <div>
+                        <label>Cep:</label>
+                        <input name="cep" type="numeric" id="cep" value="" size="8" maxlength="8"/>
+                        <span class="msg_erro" id="msg_erro"></span>
+                    </div>
+                    <div>
+                        <label>Rua:</label>
+                        <input name="rua" type="text" id="rua" size="50" readonly />
+                    </div>
+                    <div>
+                        <label>Bairro:</label>
+                        <input name="bairro" type="text" id="bairro" size="40" readonly />
+                    </div>        
+                    <div>
+                        <label>Cidade:</label>
+                        <input name="cidade" type="text" id="cidade" size="40" readonly />
+                    </div>
+                    <div>
+                        <label>Estado:</label>
+                        <input name="uf" type="text" id="uf" size="2" readonly />        
+                    </div>
+        
+                </fieldset>
+
+                
+            <fieldset class="quadroCEP">
+
+                <legend>Endereço de Entrega</legend>
+
+                <div>
+                    <label>Cep:</label>
+                    <input name="entrega_cep" type="numeric" id="entrega_cep" value="" size="8" maxlength="8"/>
+                    <span class="msg_erro" id="entrega_msg_erro"></span>
+                </div>
+                <div>
+                    <label>Rua:</label>
+                    <input name="entrega_rua" type="text" id="entrega_rua" size="50" readonly />
+                </div>
+                <div>
+                    <label>Bairro:</label>
+                    <input name="entrega_bairro" type="text" id="entrega_bairro" size="40" readonly />
+                </div>        
+                <div>
+                    <label>Cidade:</label>
+                    <input name="entrega_cidade" type="text" id="entrega_cidade" size="40" readonly />
+                </div>
+                <div>
+                    <label>Estado:</label>
+                    <input name="entrega_uf" type="text" id="entrega_uf" size="2" readonly />        
+                </div>
+
+            </fieldset>
+
+      </form>
+
+    </body>
+
+    <script src="helper_pesquisacep.js"></script> 
+
+    <script>
+        
+        document.getElementById('cep').onchange = function(){
+
+            pesquisarCep('cep','rua','bairro','cidade','uf', 'msg_erro');
+
+            }
+
+        document.getElementById('entrega_cep').onchange = function(){
+
+            pesquisarCep('entrega_cep','entrega_rua','entrega_bairro','entrega_cidade','entrega_uf', 'entrega_msg_erro');
+
+            }
+        
+    </script>
+
+</html>
