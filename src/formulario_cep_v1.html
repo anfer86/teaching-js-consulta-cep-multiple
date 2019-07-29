@@ -1,0 +1,41 @@
+<html>
+    <head>
+    <title>Verificação de CEP</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+    </head>
+
+    <body>
+    <!-- Inicio do formulario -->
+      <form method="get" action="#">
+            <fieldset class="quadroCEP">
+                    <legend>Endereço de Residência</legend>
+        
+                    <div>
+                        <label>Cep:</label>
+                        <input name="cep" type="numeric" id="cep" value="" size="8" maxlength="8"/>
+                        <span class="msg_erro" id="msg_erro"></span>
+                    </div>
+
+                    <!-- TODO
+                    Implementar os campos rua, bairro, cidade, estado.
+                    -->
+        
+                </fieldset>
+                
+
+      </form>
+
+    </body>
+
+    <script src="helper_pesquisacep.js"></script> 
+
+    <script>
+
+        /* TODO
+        Implementar o evento onchange do elemento 'cep'
+        */        
+        
+    </script>
+
+</html>
